@@ -1,0 +1,32 @@
+.button {
+    width: 300px;
+    height: 55px;
+    border-radius: 10px;
+    background-color: $blue-color;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.5s all;
+
+    &:hover {
+        box-shadow: 0 0 10px $blue-color, 0 0 20px $blue-color;
+        border: none;
+    }
+
+    &_small {
+        width: 220px;
+    }
+
+    &_orange {
+        &:hover {
+            box-shadow: 0 0 10px #FF5722, 0 0 20px #FF5722;
+            border: none;
+        }
+    }
+
+    &_submit {
+        width: 100%;
+    }
+}

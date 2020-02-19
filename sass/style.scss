@@ -1,0 +1,24 @@
+@import 'libs/_bootstrap-reboot.min';
+@import 'libs/font';
+
+@import 'base/variables';
+@import 'base/animation';
+
+:root {
+    font-family: 'Museo Sans Cyrl', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@import 'blocks/header';
+@import 'blocks/_button';
+@import 'blocks/about-us';
+@import 'blocks/services';
+@import 'blocks/catalog';
+@import 'blocks/_footer';
+@import 'blocks/_form';

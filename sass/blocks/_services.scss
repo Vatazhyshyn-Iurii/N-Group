@@ -1,0 +1,126 @@
+.services {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #f6f6f6;
+
+    h2 {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    &__header {
+        margin-top: 50px;
+        font-weight: 500;
+        display: grid;
+        grid-template-columns: 1fr;
+        color: $blue-color;
+        font-size: 18px;
+
+        &-tab {
+            margin-top: 10px;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            &:after {
+                content: "";
+                display: block;
+                width: 0%;
+                height: 3px;
+                background-color: $red-color;
+                margin-top: 4px;
+                transition: 0.4s;
+
+            }
+
+            &:hover {
+                &:after {
+                    width: 40%;
+                }
+            }
+        }
+    }
+
+    &__tabcontent {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        .description {
+            &__title {
+                font-size: 21px;
+                text-align: center;
+                font-weight: 700;
+            }
+
+            &__text {
+                margin-top: 30px;
+                font-weight: 300;
+                margin-bottom: 40px;
+            }
+        }
+
+        .photo {
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: grid;
+    }
+}
+
+@media (min-width: 768px) {
+    .services {
+        &__header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        &__tabcontent {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            align-items: center;
+
+            .photo {
+                img {
+                    max-width: 400px;
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 991px) {
+    .services {
+        &__header {
+            grid-template-columns: 1fr 1fr 1fr;
+            text-align: center;
+        }
+
+        &__tabcontent {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            align-items: center;
+            grid-auto-rows: inherit;
+
+            .photo {
+                img {
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
